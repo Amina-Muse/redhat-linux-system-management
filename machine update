@@ -1,0 +1,25 @@
+#!/bin/bash
+# Topic: System Management
+# Linux machine update
+
+set -e
+
+# Usage: ./system_management.sh
+
+# Validating you are in the correct folder
+pwd
+
+# Navigate to the specified folder
+cd companyA
+
+# Checks for available updates
+sudo yum -y check-update
+
+# Applying security updates
+sudo yum -y update --security
+
+# Updating all packages
+sudo yum -y upgrade
+
+# Viewing installed packages and their versions
+yum list installed | grep ssh
