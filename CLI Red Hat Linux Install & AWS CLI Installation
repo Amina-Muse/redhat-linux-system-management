@@ -1,0 +1,33 @@
+#!/bin/bash 
+# Topic: System Management
+# Linux machine CLI Red Hat Linux Install & AWS CLI Installation
+
+# AWS CLI Red Hat Linux Install
+
+# Verifying python installation 
+python3 --version
+
+# Verifying pip package manager installation (pip = package manager for python)
+pip3 --version
+
+# AWS CLI Installation
+
+# Download AWS CLI Package
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+# Explanation: Use curl to download the AWS CLI installation package from the specified URL.
+# The -o flag specifies the output file name, here set as "awscliv2.zip."
+
+# Unzip AWS CLI Package
+unzip awscliv2.zip
+# Explanation: Unzip the downloaded zip file ("awscliv2.zip") to access the installation files.
+
+# Install AWS CLI
+sudo ./aws/install
+# Explanation: Execute the AWS CLI installation script with elevated privileges.
+# This step runs the necessary installation procedures to set up the AWS CLI on your system.
+
+# Verify that the AWS CLI is installed by displaying help information.
+aws help
+
+# Exits the verification process, marking the completion of the AWS CLI installation.
+q  # Exit
