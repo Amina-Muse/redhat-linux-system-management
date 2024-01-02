@@ -1,0 +1,8 @@
+# Downgrading a Package
+
+# View history updates (Make note of ID column for EC2)
+sudo yum history list
+
+# Note the transaction ID and use it in the next command
+ sudo yum history info <transaction_ID>
+ sudo yum history undo <transaction_ID>
